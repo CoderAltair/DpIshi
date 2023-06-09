@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "934654529733",
+    "project_id": "mobilegames-fc13c",
+    "storage_bucket": "mobilegames-fc13c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934654529733:android:8410e289ca84201be860ac",
+        "android_client_info": {
+          "package_name": "uz.in1.game_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934654529733-bho138jcr0r2m4ck1pni4cv3d5jfvfvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqiX4QYAc3zM5SeTIjfk4mkH6PgbypZ9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934654529733-bho138jcr0r2m4ck1pni4cv3d5jfvfvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
