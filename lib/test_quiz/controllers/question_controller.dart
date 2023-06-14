@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-
 import '../models/question_model.dart';
 import '../screens/score/score_screen.dart';
 
@@ -89,10 +87,6 @@ class QuestionController extends GetxController
       _animationController.reset();
 
       _animationController.forward().whenComplete(nextQuestion);
-    } else {
-      Get.to(
-        const ScoreScreen(),
-      );
     }
   }
 

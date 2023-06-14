@@ -32,7 +32,7 @@ class _Game15State extends State<Game15> {
         numberList.add(i + 1);
       }
     }
-    // numberList.shuffle();
+     numberList.shuffle();
     numberList.add(16);
     time = 0;
     score = 0;

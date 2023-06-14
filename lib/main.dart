@@ -1,8 +1,6 @@
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'auth/first_scren.dart';
 import 'bloc/comments/bloc.dart';
 import 'bottom_navigator.dart';
@@ -26,8 +24,7 @@ class _MyAppState extends State<MyApp> {
   AppPrefs prefs = AppPrefs.instance;
   @override
   Widget build(BuildContext context) {
-    print('***************************');
-    print(prefs.employeeService);
+  
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => SendCommentsBloc()),

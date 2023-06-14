@@ -1,21 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../bottom_navigator.dart';
 import '../../constants/app_styles.dart';
 import '../../controllers/question_controller.dart';
 import 'chart.dart';
 
-class ScoreScreen extends StatelessWidget {
+class ScoreScreen extends StatefulWidget {
   const ScoreScreen({super.key});
 
+  @override
+  State<ScoreScreen> createState() => _ScoreScreenState();
+}
+
+class _ScoreScreenState extends State<ScoreScreen> {
   @override
   Widget build(BuildContext context) {
     QuestionController qnController = Get.put(QuestionController());
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(
-          "Score",
-          style: AppTextStyle.primaryB(),
+        automaticallyImplyLeading: false,
+        title: Center(
+          child: Text(
+            "Natijangiz",
+            style: AppTextStyle.primaryB()
+                .copyWith(fontSize: 20, color: Colors.white),
+          ),
         ),
       ),
       body: Padding(
@@ -42,8 +52,11 @@ class ScoreScreen extends StatelessWidget {
                     xj: (qnController.questions.length -
                             qnController.numOfCorrectAns) /
                         (qnController.questions.length).toDouble()),
+                const SizedBox(
+                  height: 20,
+                ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(0.0),
                   child: Card(
                     elevation: 4,
                     color: Theme.of(context).colorScheme.onSecondary,
@@ -63,9 +76,15 @@ class ScoreScreen extends StatelessWidget {
                               children: [
                                 const Text(
                                   'Sizning natijangiz',
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500),
                                 ),
-                                const Text(
-                                  'Siz 10 ta savoldan 6 tasiga to`g`ri 4 tasiga xato javob berdingiz',
+                                Text(
+                                  'Siz ${qnController.questions.length} ta savoldan ${qnController.numOfCorrectAns} tasiga to`g`ri ${qnController.questions.length - qnController.numOfCorrectAns} tasiga xato javob berdingiz',
+                                  style: const TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w400),
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -73,9 +92,17 @@ class ScoreScreen extends StatelessWidget {
                                 Transform.translate(
                                   offset: const Offset(-5, 0),
                                   child: TextButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.pushAndRemoveUntil(context,
+                                          MaterialPageRoute(builder: (context) {
+                                        return const Home();
+                                      }), (route) => false);
+                                    },
                                     child: const Text(
                                       'Продолжить',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400),
                                     ),
                                   ),
                                 )
@@ -87,7 +114,9 @@ class ScoreScreen extends StatelessWidget {
                             child: AspectRatio(
                               aspectRatio: 1,
                               child: Image.asset(
-                                'assets/images/4772.jpg',
+                                qnController.numOfCorrectAns != 4
+                                    ? 'assets/ikki.jpg'
+                                    : 'assets/bew.jpg',
                               ),
                             ),
                           )

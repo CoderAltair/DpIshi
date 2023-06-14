@@ -13,29 +13,28 @@ class QuizScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        // Fluttter show the back button automatically
         backgroundColor: Colors.transparent,
         elevation: 0,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: controller.nextQuestion,
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12), // <-- Radius
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text("Keyingi"),
-                  Icon(Icons.navigate_next_rounded)
-                ],
-              ),
-            ),
-          ),
-        ],
+        // actions: [
+        //   Padding(
+        //     padding: const EdgeInsets.all(8.0),
+        //     child: ElevatedButton(
+        //       onPressed: controller.nextQuestion,
+        //       style: ElevatedButton.styleFrom(
+        //         shape: RoundedRectangleBorder(
+        //           borderRadius: BorderRadius.circular(12),
+        //         ),
+        //       ),
+        //       child: Row(
+        //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //         children: const [
+        //           Text("Keyingi"),
+        //           Icon(Icons.navigate_next_rounded)
+        //         ],
+        //       ),
+        //     ),
+        //   ),
+        // ],
       ),
       body: const Body(),
     );

@@ -31,38 +31,9 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    const drawerHeader = UserAccountsDrawerHeader(
-      decoration: BoxDecoration(
-        color: Colors.deepPurple,
-      ),
-      accountName: Text('Azizbek'),
-      accountEmail: Text('azizbekqodirov@gmail.com'),
-      currentAccountPicture: CircleAvatar(
-        backgroundColor: Colors.white,
-        child: FlutterLogo(size: 42.0),
-      ),
-    );
-    final drawerItems = ListView(
-      children: <Widget>[
-        drawerHeader,
-        ListTile(
-          title: const Text('Profil'),
-          onTap: () {},
-        ),
-        ListTile(
-          title: const Text('O`yin haqida'),
-          onTap: () {},
-        ),
-        ListTile(
-          title: const Text('other drawer item'),
-          onTap: () {},
-        ),
-      ],
-    );
+ 
     return Scaffold(
-      drawer: Drawer(
-        child: drawerItems,
-      ),
+  
       appBar: AppBar(
         backgroundColor: MainColor.secondaryColor,
         title: const Center(child: Text('AVT GAMES')),

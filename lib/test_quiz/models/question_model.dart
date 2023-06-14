@@ -13,27 +13,47 @@ class Question {
 const List sampleData = [
   {
     "id": 1,
-    "question":
-        "Flutter texnologiyasi qaysi kompaniya tomonidan ishlab chiqilgan",
-    "options": ['Apple', 'Google', 'Facebook', 'Microsoft'],
+    "question": "O`zbekiston Respublikasi gerbi qachon tasdiqlangan ?",
+    "options": [
+      '1991-yil 2-iyul',
+      '1992-yil 2-iyul',
+      '1992-yil 1-iyul',
+      '1991-yil 8-dekabr'
+    ],
     "answer_index": 1,
   },
   {
     "id": 2,
-    "question": "Google qachondan flutterga reliz bergan",
-    "options": ['Iyul 2017', 'Iyun 2017', 'May 2017', 'May 2018'],
+    "question": "O`zbekiston Respublikasi madhiyasi qachon tasdiqlangan ?",
+    "options": [
+      '1992-yil 2-iyul',
+      '1991-yil 2-iyul',
+      '1992-yil 10-dekabr',
+      '1991-yil 8-dekabr'
+    ],
     "answer_index": 2,
   },
   {
     "id": 3,
-    "question": "So`zlar qaysi tipda yoziladi",
-    "options": ['Double', 'Int', 'Char', 'Word'],
-    "answer_index": 2,
+    "question":
+        "O`zbekiston Respublikasi konstitutsiyasi qachon tasdiqlangan ?",
+    "options": [
+      '1992-yil 8-dekabr',
+      '1992-yil 2-iyul',
+      '1991-yil 2-iyul',
+      '1991-yil 8-dekabr'
+    ],
+    "answer_index": 0,
   },
   {
     "id": 4,
-    "question": "Chop ettish komandasi qaysi bir javobda",
-    "options": ['Cin', 'Count>>', 'Cout', 'Output>>'],
-    "answer_index": 2,
+    "question": "Yurtimiz bilan chegaradosh bo`lmagan mamlakatni toping ?",
+    "options": [
+      'Qozog`iston',
+      'Qirg`iziston',
+      'Tojikiston',
+      'Rossiya Federatsiyasi',
+    ],
+    "answer_index": 3,
   },
 ];

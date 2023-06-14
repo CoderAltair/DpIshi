@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_games/service/pref.dart';
 import '../bottom_navigator.dart';
 import '../service/firebase_auth.dart';
 import '../service/prefs.dart';
+import '../service/utils.dart';
 
 class SignUp extends StatefulWidget {
   static String id = 'signup_page';
@@ -28,7 +30,7 @@ class _SignUpState extends State<SignUp> {
         ),
       );
     } else {
-      // Utils.fireToast('Check your information');
+      Utils.fireToast('Iltimos ma`lumotlaringizni qayta tekshiring');
     }
   }
 
@@ -48,6 +50,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         // alignment: Alignment.topCenter,
         children: [
@@ -97,7 +100,12 @@ class _SignUpState extends State<SignUp> {
                 child: Expanded(
                   child: ElevatedButton(
                     onPressed: () {
-                      _doSignUp();
+                      if (fullNameController.text.isNotEmpty) {
+                        Prefs.saveUserName(fullNameController.text);
+                        _doSignUp();
+                      } else {
+                        return Utils.fireToast('Iltimos ismingizni kiriting.');
+                      }
                     },
                     child: const Text('Sign Up'),
                   ),
